@@ -1,17 +1,57 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+//Simple function component
+function Greet(props) {
+  console.log(props);
+  return (
+    <h1>
+      Kiubo {props.name} {props.surname}{" "}
+    </h1>
+  );
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//Pattern mattching version
+function GreetAgain({ name, surname }) {
+  return (
+    <h1>
+      Hello {name} {surname}
+    </h1>
+  );
+}
+
+//Class version
+
+class Goodbye extends React.Component {
+  constructor(props) {
+    //Call the constructor of the parent class
+    super(props);
+    this.state = {
+      day: props.day,
+      month: props.month,
+      year: props.year,
+    };
+  }
+
+  render() {
+    return (
+      <h1>
+        Bye {this.state.day}/{this.state.month}/{this.state.year}
+      </h1>
+    );
+  }
+}
+
+function App() {
+  return (
+    <div>
+      <GreetAgain name="Pana" surname="panini" />
+      <Greet name="Pancho" surname="Hernandez" />
+      <Goodbye day={10} month="August" year={2000} />
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
