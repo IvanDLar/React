@@ -1,0 +1,24 @@
+
+[
+     {
+        "id": 1, 
+        "fullName": "Iván Díaz",
+        "address": "Av. Tecnologico",
+        "phoneNumber": "333-999-4444",
+        "email": "ivandiaz.lara.m@gmail.com"
+     },
+     {
+        "id": 2, 
+        "fullName": "Iván Lopez",
+        "address": "Av. Lopolopgico",
+        "phoneNumber": "111-555-6666",
+        "email": "ivanlopez.lara.m@hotmail.com"
+     },
+     {
+        "id": 3, 
+        "fullName": "Hernan Perez",
+        "address": "Av. Lerma",
+        "phoneNumber": "111-555-23453",
+        "email": "hernanperez.m@hotmail.com"
+     }
+]
